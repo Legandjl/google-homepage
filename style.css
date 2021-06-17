@@ -35,6 +35,8 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  margin:0;
+  padding:0;
 }
 
 /* A elements that don't have a class get default styles */
@@ -78,51 +80,104 @@ select {
 body {
 
     background-color: #FFFFFF;
+    height:100vh;
+    border-style:solid;
+  
 }
 
 
 
-#main {
 
-    display: grid;
-    grid-template-columns: 1fr 10fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr 1fr;
+#main { 
+
+    display: grid;  
+    grid-template-columns: 1fr minmax(382px, 586px) 1fr;
+    grid-gap:10px;
+    outline: none !important;
+   
+    text-align: start;
+    justify-self: center;
+    border-style: solid;;
+    grid-template-rows: auto 1fr auto;
     justify-items: center;
     align-items: center;
-    height:100vh;
+    height:100%; 
+  
+  }
+
+#header {
+
+    grid-column: 1/-1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));    
+    border-style: solid;
+    align-items: end;
+    justify-items: end;    
+    width:100%;
+    margin:0;
     
+
 }
 
-#searcharea{
+#footer {
 
-    grid-column: 2;
-    grid-row: 2;
-    display: grid;
-    justify-items: center;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));    
+  border-style: solid;
+  align-items: end;
+  justify-items: end;    
+  width:100%;
+  grid-row:-1;
+  margin:0;
+  
+
+}
 
 
+#searcharea{    
+    
+   margin-bottom:200px;
+   border-style: solid;
+   display: grid;
+   justify-items: center;
+   width:100%;   
+   grid-column: 2;
+ 
+
+}
+
+form {
+
+  width:100%;
+ 
+ 
 }
 
 #searchbox {
-
-    width: 582px;
-    height: 44px;
-   border-style: solid;
-   border-radius: 20px;
-   outline: none !important;
-   padding-left: 5%;
-   text-align: start;
-   background: transparent;
-   background-image: url ("searching-magnifying-glass_icon-icons.com_72568(1).png"
-   );
+  
+  width:100%;
+  border-style: solid;      
+  height: 44px;
+  border-radius: 20px;
+  outline: none !important;
+  padding-left: 5%;
+  text-align: start;
+ 
+  border-style: solid;
+  
 
 }
 
+#buttonwrap {   
+    margin:20px;
+
+    }
 
 
-#googlelogo {
-
-    align-self: center;
+#googlelogo {    
     width: 272px;
     height:92px;
 }
+
