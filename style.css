@@ -37,6 +37,7 @@ body {
   line-height: 1.5;
   margin:0;
   padding:0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
@@ -93,8 +94,7 @@ body {
     display: grid;  
     grid-template-columns: 1fr minmax(382px, 586px) 1fr;
     grid-gap:10px;
-    outline: none !important;
-   
+    outline: none !important;   
     text-align: start;
     justify-self: center;
     border-style: solid;;
@@ -110,10 +110,10 @@ body {
     grid-column: 1/-1;
     grid-row: 1;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));    
+    grid-template-columns: 1fr 1fr;    
     border-style: solid;
     align-items: end;
-    justify-items: end;    
+    justify-items: center;    
     width:100%;
     margin:0;
     
@@ -124,10 +124,13 @@ body {
 
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));    
+  grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
+  /*grid-template-columns: 1fr 1fr 1fr;*/
+  /*grid-template-rows: 1fr 1fr;*/
+    
   border-style: solid;
   align-items: end;
-  justify-items: end;    
+  justify-items: center;    
   width:100%;
   grid-row:-1;
   margin:0;
@@ -181,3 +184,136 @@ form {
     height:92px;
 }
 
+#topleft
+{
+
+  display:grid;
+
+ align-self: start;
+ justify-self: start;;
+ grid-template-columns: 1fr 1fr;
+ grid-gap: 10px;
+ border-style: solid;;
+}
+
+
+#topright {
+
+  display:grid;
+
+  align-self: start;
+  justify-self: end;;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  border-style: solid;;
+ }
+
+ #bottomleft {
+
+
+  display:grid;
+  justify-self: start;
+
+ grid-template-columns: repeat(3, auto);
+ grid-gap:10px;
+ 
+ border-style: solid;
+
+ 
+
+
+ }
+
+
+ #bottomright{
+
+
+  display:grid;
+  justify-self: end;
+
+ 
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  border-style: solid;;
+ 
+
+ }
+
+
+
+ #user {
+
+  border-radius: 50%;
+ }
+
+ #launcher {
+
+  justify-self: center;
+ }
+
+ p{
+
+  border-style:solid;
+  align-self: center;
+  justify-self: center;
+ }
+
+ button {
+
+  background-color: #F8F9FA;
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 5%;  
+  color: #202124; 
+  text-align: center;
+  margin:auto;
+  padding:10px;
+  padding-left: 15px;
+  padding-right: 15px;
+ }
+
+ @media only screen and (max-width: 1200px) {
+
+  
+
+  
+#bottomright{
+
+   justify-self: center;   
+   grid-column: -2;
+ 
+    
+  
+   }
+
+   
+ #bottomleft{
+
+    justify-self: center;
+    
+   
+  } 
+
+  #carbon {
+
+    grid-row: 1;
+    grid-column: 1/-1;
+  }
+
+
+
+*/
+
+ 
+
+
+ }
+
+ @media only screen and (max-width: 700px) {
+
+ 
+
+
+ }
+
+}
