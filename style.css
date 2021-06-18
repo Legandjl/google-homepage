@@ -82,7 +82,8 @@ body {
 
     background-color: #FFFFFF;
     height:100vh;
-    border-style:solid;
+    color: #2F2F2F
+ 
   
 }
 
@@ -97,7 +98,7 @@ body {
     outline: none !important;   
     text-align: start;
     justify-self: center;
-    border-style: solid;;
+    
     grid-template-rows: auto 1fr auto;
     justify-items: center;
     align-items: center;
@@ -111,7 +112,7 @@ body {
     grid-row: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;    
-    border-style: solid;
+  
     align-items: end;
     justify-items: center;    
     width:100%;
@@ -128,13 +129,15 @@ body {
   /*grid-template-columns: 1fr 1fr 1fr;*/
   /*grid-template-rows: 1fr 1fr;*/
     
-  border-style: solid;
+
   align-items: end;
   justify-items: center;    
   width:100%;
   grid-row:-1;
   margin:0;
-  
+  background-color: #F2F2F2;
+  padding:20px;
+ 
 
 }
 
@@ -142,7 +145,7 @@ body {
 #searcharea{    
     
    margin-bottom:200px;
-   border-style: solid;
+  
    display: grid;
    justify-items: center;
    width:100%;   
@@ -166,9 +169,8 @@ form {
   border-radius: 20px;
   outline: none !important;
   padding-left: 5%;
-  text-align: start;
- 
-  border-style: solid;
+  text-align: start; 
+
   
 
 }
@@ -182,30 +184,29 @@ form {
 #googlelogo {    
     width: 272px;
     height:92px;
+    margin-bottom:30px;
 }
 
 #topleft
 {
 
   display:grid;
-
  align-self: start;
  justify-self: start;;
  grid-template-columns: 1fr 1fr;
  grid-gap: 10px;
- border-style: solid;;
+
 }
 
 
 #topright {
 
   display:grid;
-
   align-self: start;
   justify-self: end;;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
-  border-style: solid;;
+ 
  }
 
  #bottomleft {
@@ -213,11 +214,9 @@ form {
 
   display:grid;
   justify-self: start;
-
  grid-template-columns: repeat(3, auto);
- grid-gap:10px;
- 
- border-style: solid;
+ grid-gap:10px; 
+
 
  
 
@@ -229,14 +228,19 @@ form {
 
 
   display:grid;
-  justify-self: end;
-
- 
+  justify-self: end; 
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
-  border-style: solid;;
+ 
  
 
+ }
+
+ #topleft,  #topright {
+
+  padding: 20px;
+
+  
  }
 
 
@@ -253,7 +257,6 @@ form {
 
  p{
 
-  border-style:solid;
   align-self: center;
   justify-self: center;
  }
@@ -270,6 +273,21 @@ form {
   padding:10px;
   padding-left: 15px;
   padding-right: 15px;
+  cursor:pointer;
+ }
+
+ #leaf {
+
+  height:20px;
+  width:20px;
+ }
+
+ #bottomcarbon{
+
+  display:grid;
+
+  grid-template-columns: auto 1fr;
+  grid-gap:5px;
  }
 
  @media only screen and (max-width: 1200px) {
@@ -294,7 +312,7 @@ form {
    
   } 
 
-  #carbon {
+  #bottomcarbon {
 
     grid-row: 1;
     grid-column: 1/-1;
