@@ -60,21 +60,6 @@ select {
   font: inherit;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-   scroll-behavior: auto;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
 
 
 
@@ -82,138 +67,34 @@ body {
 
     background-color: #FFFFFF;
     height:100vh;
-    color: #2F2F2F
-    
- 
-  
+    color: #2F2F2F  
 }
-
-
-
-
-#main { 
-
-    display: grid;  
-    grid-template-columns: 1fr minmax(382px, 586px) 1fr;
-    grid-gap:10px;
-    outline: none !important;   
-    text-align: start;
-    justify-self: center;
-    
-    grid-template-rows: auto 1fr auto;
-    justify-items: center;
-    align-items: center;
-    height:100%; 
-    font-size:15px;
-  
-  }
 
 #header {
 
-    grid-column: 1/-1;
-    grid-row: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;    
-  
-    align-items: end;
-    justify-items: center;    
-    width:100%;
-    margin:0;
-    
-
-}
-
-#footer {
-
   grid-column: 1/-1;
+  grid-row: 1;
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
-  /*grid-template-columns: 1fr 1fr 1fr;*/
-  /*grid-template-rows: 1fr 1fr;*/
-    
-
+  grid-template-columns: 1fr 1fr;      
   align-items: end;
   justify-items: center;    
   width:100%;
- 
-  grid-row:-1;
   margin:0;
-  background-color: #F2F2F2;
-  padding:20px;
-  
-  grid-gap:20px;
- 
- 
-
-}
-
-
-#searcharea{    
-    
-   margin-bottom:200px;
-  
-   display: grid;
-   justify-items: center;
-   width:100%;   
-   grid-column: 2;
- 
-
-}
-
-form {
-
-  width:100%;
-  position: relative;
- 
- 
-}
-
-#searchbox {
-  
-  width:100%;
-  border-style: solid;      
-  height: 44px;
-  border-radius: 20px;
-  outline: none !important;
-  padding-left: 8%;
-  text-align: start; 
- 
-
   
 
 }
 
-#searchbox:hover {
+#topleft,  #topright {
 
-  box-shadow: 1px 1px 1px 1px #E7E9EB;
-}
-
-#searchicon {
-
-  position: absolute;  
- top:10px;
-  margin-left: 15px;
+  padding: 20px;
   
-  
-}
+ }
 
-#buttonwrap {   
-    margin:20px;
-
-    }
-
-
-#googlelogo {    
-    width: 272px;
-    height:92px;
-    margin-bottom:30px;
-}
 
 #topleft
 {
 
-  display:grid;
-
+display:grid;
  justify-self: start;;
  grid-template-columns: 1fr 1fr;
  grid-gap: 10px;
@@ -229,66 +110,145 @@ form {
   display:grid;
   align-self: center;
   justify-self: end;;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
  
  }
 
- #bottomleft {
+ #topright a {
 
+  align-self: center;
+  
+ }
+
+#main { 
+
+    display: grid;  
+    grid-template-columns: 1fr minmax(382px, 586px) 1fr;
+    grid-gap:10px;   
+    text-align: start;
+    justify-self: center;    
+    grid-template-rows: auto 1fr auto;
+    justify-items: center;
+    align-items: center;
+    height:100%; 
+    font-size:15px;
+  
+  }
+
+
+
+
+#searcharea{    
+    
+   margin-bottom:200px;  
+   display: grid;
+   justify-items: center;
+   width:100%;   
+   grid-column: 2;
+ 
+
+}
+
+#googlelogo {    
+  width: 272px;
+  height:92px;
+  margin-bottom:30px;
+}
+
+form {
+
+  width:100%;
+  position: relative; 
+ 
+}
+
+#searchbox {
+  
+  width:100%;
+  border-style: solid;      
+  height: 44px;
+  border-radius: 20px;  
+  padding-left: 8%;
+  text-align: start;   
+
+}
+
+#searchicon {
+
+  position: absolute;  
+  top:10px;
+  margin-left: 15px;  
+  
+}
+
+#searchbox:hover {
+
+  box-shadow: 1px 1px 1px 1px #E7E9EB;
+}
+
+
+
+#buttonwrap {   
+    margin:20px;
+
+    }
+
+#footer {
+
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );  
+  justify-items: center;    
+  width:100%; 
+  grid-row:-1;
+  margin:0;
+  background-color: #F2F2F2;
+  padding:20px;  
+  grid-gap:20px;
+
+}
+
+#footer a{
+
+  align-self: center;
+  justify-self: center;
+  color: rgba(0, 0, 0, 0.54);
+ }
+
+ #bottomleft {
 
   display:grid;
   justify-self: start;
- grid-template-columns: repeat(3, auto);
- grid-gap:10px; 
- margin-left:20px;
-
-
- 
-
+  grid-template-columns: repeat(3, auto);
+  grid-gap:10px; 
+  margin-left:20px;
 
  }
 
 
  #bottomright{
 
-
   display:grid;
   justify-self: end; 
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
-  margin-right:20px;
- 
- 
+  margin-right:20px; 
 
  }
-
- #topleft,  #topright {
-
-  padding: 20px;
-
-  
- }
-
-
- #topright a {
-
-  align-self: center;
- }
-
-
 
  #user {
 
   border-radius: 50%;
   align-self: center;
+
  }
 
  #user:hover {
 
-outline-style: solid ;
-outline-width: 6px;
-outline-color: #EFF0F0;
+  outline-style: solid ;
+  outline-width: 6px;
+  outline-color: #EFF0F0;
 
 
  }
@@ -296,6 +256,7 @@ outline-color: #EFF0F0;
  #launcher {
 
   justify-self: center;
+
  }
 
  #launcher:hover {
@@ -307,17 +268,10 @@ outline-color: #EFF0F0;
   outline-width: 8px;
  }
 
- #footer a{
-
-  align-self: center;
-  justify-self: center;
-  color: rgba(0, 0, 0, 0.54);
- }
 
  button {
 
   background-color: #F8F9FA;
-
   border-style: solid;
   border-width: 0px;
   border-radius: 5%;   
@@ -341,10 +295,9 @@ outline-color: #EFF0F0;
 
  button:hover {
 
-outline:solid;
-outline-color: #EFF0F0;
-
-box-shadow: 1px 1px #E7E9EB;
+  outline:solid;
+  outline-color: #EFF0F0;
+  box-shadow: 1px 1px #E7E9EB;
 
  }
 
@@ -352,14 +305,15 @@ box-shadow: 1px 1px #E7E9EB;
 
   height:20px;
   width:20px;
+
  }
 
  #bottomcarbon{
 
   display:grid;
-
   grid-template-columns: auto 1fr;
   grid-gap:5px;
+
  }
 
  @media only screen and (max-width: 1200px) {
@@ -370,17 +324,14 @@ box-shadow: 1px 1px #E7E9EB;
 #bottomright{
 
    justify-self: center;   
-   grid-column: -2;
- 
-    
+   grid-column: -2;    
   
    }
 
    
  #bottomleft{
 
-    justify-self: center;
-    
+    justify-self: center;    
    
   } 
 
@@ -392,18 +343,12 @@ box-shadow: 1px 1px #E7E9EB;
 
 
 
-*/
 
  
 
 
  }
 
- @media only screen and (max-width: 700px) {
-
  
 
 
- }
-
-}
