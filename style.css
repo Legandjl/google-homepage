@@ -308,6 +308,10 @@ form {
 
  }
 
+ input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
  #bottomcarbon{
 
   display:grid;
