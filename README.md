@@ -1,2 +1,1 @@
-Simple Javascript Rock Paper Scissors game for the Odin project.
-Helped me get to grips with event listeners, manipulation of the DOM and CSS grid.
+First project from the Odin Project, a recreation of the Google Homepage created with html and css.
